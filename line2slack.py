@@ -7,7 +7,6 @@ import urllib
 import json
 import os
 import sys, codecs
-#sys.stdout = codecs.getwriter("utf-8")(sys.stdout)
 MODE = sys.argv
 
 import slack
@@ -60,13 +59,13 @@ def main():
     try:
     	
     	"""
-    		table aub_line_summary 
+    		table line_summary 
     		id int primary key auto_increment
     		followers int default 0
     		targeted_reaches int default 0
     		blocks int default 0
     	"""
-        cur.execute("INSERT INTO aub_line_summary( followers, targeted_reaches, blocks ) values ( %s, %s, %s )", (data['followers'], data['targetedReaches'], data['blocks'],))
+        cur.execute("INSERT INTO line_summary( followers, targeted_reaches, blocks ) values ( %s, %s, %s )", (data['followers'], data['targetedReaches'], data['blocks'],))
         connect.commit()
     except Exception as e:
         log.error(data)
