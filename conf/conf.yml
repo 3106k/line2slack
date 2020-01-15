@@ -1,0 +1,21 @@
+development:
+  database:
+    host: 'localhost'
+    db: 'database'
+    user: 'user'
+    password: 'password'
+    charset: 'utf8'
+  slack-token: 'slack-token'
+production:
+  database:
+    host: 'host'
+    db: 'database'
+    user: 'user'
+    password: 'password'
+    charset: 'utf8mb4'
+  slack-token: 'token'
+  twitter:
+    consumer_key: ''
+    consumer_secret: ''
+    access_token: ''
+    access_token_secret: ''

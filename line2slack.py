@@ -23,7 +23,7 @@ LINE@のフォロワーを取得してDBに入れるよ
 """
 
 # ymlにDBのID/PW類を入れておく
-with open('hogehoge.yml', 'r') as yml:
+with open('./conf/conf.yml', 'r') as yml:
     config = yaml.load(yml)
 
 HOST     = config[MODE[1]]['database']['host']
